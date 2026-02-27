@@ -1,7 +1,12 @@
 <template>
   <div class="min-h-screen bg-[#0a0f1a] text-white font-sans">
     <!-- NAVBAR -->
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-[#0a0f1a]/70 backdrop-blur-xl border-b border-white/5 transition-all duration-300">
+    <nav :class="[
+      'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
+      isScrolled 
+        ? 'bg-white/10 backdrop-blur-xl border-b border-white/10' 
+        : 'bg-transparent border-b border-transparent'
+    ]">
       <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <a href="#" class="flex items-center gap-2">
           <span class="text-2xl font-bold italic">R<span class="text-accent-400">S</span></span>
@@ -66,13 +71,18 @@
             </a>
           </div>
 
-          <!-- Right Content - Profile Photo -->
+          <!-- Right Content - Profile Photo with Crossed Frames -->
           <div class="hidden md:flex justify-center items-center pt-20">
-            <div class="relative animate-fade-in-scale animation-delay-400 animate-float">
+            <div class="relative animate-fade-in-scale animation-delay-400">
+              <!-- Decorative crossed squares -->
+              <div class="absolute -inset-8">
+                <div class="absolute top-0 left-0 w-64 h-64 border-2 border-accent-400/40 rounded-lg transform rotate-6"></div>
+                <div class="absolute top-4 left-4 w-64 h-64 border-2 border-white/20 rounded-lg transform -rotate-6"></div>
+              </div>
               <!-- Glow effect -->
-              <div class="absolute inset-0 bg-accent-400/30 rounded-full blur-3xl scale-75"></div>
+              <div class="absolute inset-0 bg-accent-400/30 rounded-2xl blur-3xl scale-75"></div>
               <!-- Profile image -->
-              <img src="./assets/ProfilePhoto.jpeg" alt="Revano Satya Pandega" class="relative w-80 h-80 rounded-full object-cover border-4 border-white/20 shadow-2xl">
+              <img src="./assets/ProfilePhoto.jpeg" alt="Revano Satya Pandega" class="relative w-72 h-72 rounded-2xl object-cover border-4 border-white/20 shadow-2xl animate-float">
             </div>
           </div>
         </div>
@@ -165,7 +175,7 @@
 
         <div class="space-y-8">
           <!-- Project 1 -->
-          <div class="group bg-[#0d1221] rounded-2xl p-8 border border-white/5 hover:border-accent-400/30 transition-all" data-aos="fade-up" data-aos-delay="200">
+          <a href="https://lumbunghijau.id" target="_blank" class="group block bg-[#0d1221] rounded-2xl p-8 border border-white/5 hover:border-accent-400/30 transition-all cursor-pointer" data-aos="fade-up" data-aos-delay="200">
             <div class="grid md:grid-cols-2 gap-8">
               <div>
                 <h3 class="text-2xl font-bold mb-2 group-hover:text-accent-400 transition-colors">Lumbung Hijau - Waste Management Platform</h3>
@@ -192,17 +202,20 @@
                   <span class="px-3 py-1 bg-white/5 rounded text-xs text-gray-400">Web App</span>
                 </div>
               </div>
-              <div class="grid grid-cols-2 gap-4">
+              <div class="relative">
                 <img src="./assets/lumbunghijau.png" alt="Lumbung Hijau" class="aspect-video w-full object-cover rounded-lg" />
-                <div class="aspect-video bg-gradient-to-br from-green-900/30 to-teal-900/30 rounded-lg flex items-center justify-center">
-                  <span class="text-4xl">♻️</span>
+                <!-- Hover overlay with link icon -->
+                <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg flex items-end justify-end p-4">
+                  <div class="bg-accent-400 p-3 rounded-full">
+                    <iconify-icon icon="mdi:open-in-new" width="24" height="24" class="text-black"></iconify-icon>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+          </a>
 
           <!-- Project 2 -->
-          <div class="group bg-[#0d1221] rounded-2xl p-8 border border-white/5 hover:border-accent-400/30 transition-all" data-aos="fade-up" data-aos-delay="300">
+          <a href="https://github.com/restyand" target="_blank" class="group block bg-[#0d1221] rounded-2xl p-8 border border-white/5 hover:border-accent-400/30 transition-all cursor-pointer" data-aos="fade-up" data-aos-delay="300">
             <div class="grid md:grid-cols-2 gap-8">
               <div>
                 <h3 class="text-2xl font-bold mb-2 group-hover:text-accent-400 transition-colors">E-Learning Cloud Infrastructure</h3>
@@ -230,9 +243,14 @@
                   <span class="px-3 py-1 bg-white/5 rounded text-xs text-gray-400">CI/CD</span>
                 </div>
               </div>
-              <div class="grid grid-cols-2 gap-4">
+              <div class="relative">
                 <img src="./assets/semicolonJHICArchitectur.png" alt="E-Learning Architecture" class="aspect-video w-full object-cover rounded-lg" />
-                <img src="./assets/docDot apps.png" alt="DocDot Apps" class="aspect-video w-full object-cover rounded-lg" />
+                <!-- Hover overlay with link icon -->
+                <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg flex items-end justify-end p-4">
+                  <div class="bg-white p-3 rounded-full">
+                    <iconify-icon icon="mdi:github" width="24" height="24" class="text-black"></iconify-icon>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -251,10 +269,10 @@
                 <iconify-icon icon="skill-icons:githubactions-light" width="28" height="28"></iconify-icon>
               </div>
             </div>
-          </div>
+          </a>
 
           <!-- Project 3 -->
-          <div class="group bg-[#0d1221] rounded-2xl p-8 border border-white/5 hover:border-accent-400/30 transition-all" data-aos="fade-up" data-aos-delay="400">
+          <a href="https://smktelkom-sda.sch.id" target="_blank" class="group block bg-[#0d1221] rounded-2xl p-8 border border-white/5 hover:border-accent-400/30 transition-all cursor-pointer" data-aos="fade-up" data-aos-delay="400">
             <div class="grid md:grid-cols-2 gap-8">
               <div>
                 <h3 class="text-2xl font-bold mb-2 group-hover:text-accent-400 transition-colors">SMK Telkom Website Rebranding</h3>
@@ -280,16 +298,17 @@
                   <span class="px-3 py-1 bg-white/5 rounded text-xs text-gray-400">Performance</span>
                 </div>
               </div>
-              <div class="grid grid-cols-2 gap-4">
-                <div class="aspect-video bg-gradient-to-br from-yellow-900/30 to-orange-900/30 rounded-lg flex items-center justify-center">
-                  <span class="text-4xl">🏫</span>
-                </div>
-                <div class="aspect-video bg-gradient-to-br from-cyan-900/30 to-blue-900/30 rounded-lg flex items-center justify-center">
-                  <span class="text-4xl">⚡</span>
+              <div class="relative">
+                <img src="./assets/semicolonJHICArchitectur.png" alt="SMK Telkom Architecture" class="aspect-video w-full object-cover rounded-lg" />
+                <!-- Hover overlay with link icon -->
+                <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg flex items-end justify-end p-4">
+                  <div class="bg-accent-400 p-3 rounded-full">
+                    <iconify-icon icon="mdi:open-in-new" width="24" height="24" class="text-black"></iconify-icon>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </section>
@@ -511,7 +530,23 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
+
+// Scroll detection for navbar
+const isScrolled = ref(false)
+
+const handleScroll = () => {
+  isScrolled.value = window.scrollY > 50
+}
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll)
+  handleScroll() // Check initial state
+})
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll)
+})
 
 const particlesOptions = ref({
   fullScreen: { enable: false },
