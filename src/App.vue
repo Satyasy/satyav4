@@ -9,13 +9,13 @@
     ]">
       <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <a href="#" class="flex items-center gap-2">
-          <span class="text-2xl font-bold italic">R<span class="text-accent-400">S</span></span>
+          <img src="./assets/dart.svg" alt="" srcset="" width="50" height="25">
         </a>
         
         <div class="hidden md:flex items-center gap-8 text-sm text-white/80">
           <a href="#projects" class="hover:text-white transition-colors">Work</a>
           <a href="#experience" class="hover:text-white transition-colors">Experience</a>
-          <a href="#blog" class="hover:text-white transition-colors">Blog</a>
+          <!-- <a href="#blog" class="hover:text-white transition-colors">Blog</a> -->
           <a href="#faq" class="hover:text-white transition-colors">FAQ</a>
           <a href="#contact" class="hover:text-white transition-colors">Contacts</a>
         </div>
@@ -24,7 +24,7 @@
           <a href="https://www.linkedin.com/in/restyand1011/" target="_blank" class="text-white/80 hover:text-white transition-colors">
             <iconify-icon icon="mdi:linkedin" width="22" height="22"></iconify-icon>
           </a>
-          <a href="https://github.com/" target="_blank" class="text-white/80 hover:text-white transition-colors">
+          <a href="https://github.com/Satyasy" target="_blank" class="text-white/80 hover:text-white transition-colors">
             <iconify-icon icon="mdi:github" width="22" height="22"></iconify-icon>
           </a>
         </div>
@@ -92,11 +92,6 @@
       <div class="absolute bottom-8 left-0 right-0 z-10 animate-fade-in-up animation-delay-800">
         <div class="max-w-7xl mx-auto px-6">
           <div class="flex flex-wrap items-center gap-8 opacity-60">
-            <!-- Google Cloud -->
-            <div class="flex items-center gap-2 text-white/70">
-              <iconify-icon icon="skill-icons:gcp-light" width="28" height="28"></iconify-icon>
-              <span class="font-medium text-sm">Google Cloud</span>
-            </div>
             <!-- AWS -->
             <div class="flex items-center gap-2 text-white/70">
               <iconify-icon icon="skill-icons:aws-light" width="28" height="28"></iconify-icon>
@@ -107,6 +102,11 @@
               <iconify-icon icon="skill-icons:docker" width="28" height="28"></iconify-icon>
               <span class="font-medium text-sm">Docker</span>
             </div>
+            <!-- Kubernetes -->
+            <div class="flex items-center gap-2 text-white/70">
+              <iconify-icon icon="skill-icons:kubernetes" width="28" height="28"></iconify-icon>
+              <span class="font-medium text-sm">Kubernetes</span>
+            </div>
             <!-- GitHub Actions -->
             <div class="flex items-center gap-2 text-white/70">
               <iconify-icon icon="skill-icons:githubactions-light" width="28" height="28"></iconify-icon>
@@ -116,6 +116,11 @@
             <div class="flex items-center gap-2 text-white/70">
               <iconify-icon icon="skill-icons:linux-light" width="28" height="28"></iconify-icon>
               <span class="font-medium text-sm">Linux</span>
+            </div>
+            <!-- Google Cloud -->
+            <div class="flex items-center gap-2 text-white/70">
+              <iconify-icon icon="skill-icons:gcp-light" width="28" height="28"></iconify-icon>
+              <span class="font-medium text-sm">Google Cloud</span>
             </div>
             <!-- Terraform -->
             <div class="flex items-center gap-2 text-white/70">
@@ -150,7 +155,7 @@
             </div>
           </div>
           
-          <div class="relative" data-aos="fade-left" data-aos-delay="300">
+          <!-- <div class="relative" data-aos="fade-left" data-aos-delay="300">
             <div class="aspect-square max-w-sm mx-auto rounded-2xl bg-gradient-to-br from-accent-400/20 to-blue-500/20 p-1">
               <div class="w-full h-full rounded-2xl bg-[#0a0f1a] flex items-center justify-center">
                 <div class="text-center">
@@ -162,7 +167,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </section>
@@ -215,7 +220,7 @@
           </a>
 
           <!-- Project 2 -->
-          <a href="https://github.com/restyand" target="_blank" class="group block bg-[#0d1221] rounded-2xl p-8 border border-white/5 hover:border-accent-400/30 transition-all cursor-pointer" data-aos="fade-up" data-aos-delay="300">
+          <a href="https://github.com/Satyasy" target="_blank" class="group block bg-[#0d1221] rounded-2xl p-8 border border-white/5 hover:border-accent-400/30 transition-all cursor-pointer" data-aos="fade-up" data-aos-delay="300">
             <div class="grid md:grid-cols-2 gap-8">
               <div>
                 <h3 class="text-2xl font-bold mb-2 group-hover:text-accent-400 transition-colors">E-Learning Cloud Infrastructure</h3>
@@ -272,7 +277,7 @@
           </a>
 
           <!-- Project 3 -->
-          <a href="https://smktelkom-sda.sch.id" target="_blank" class="group block bg-[#0d1221] rounded-2xl p-8 border border-white/5 hover:border-accent-400/30 transition-all cursor-pointer" data-aos="fade-up" data-aos-delay="400">
+          <a href="https://semicolon.smktelkom-sda.sch.id" target="_blank" class="group block bg-[#0d1221] rounded-2xl p-8 border border-white/5 hover:border-accent-400/30 transition-all cursor-pointer" data-aos="fade-up" data-aos-delay="400">
             <div class="grid md:grid-cols-2 gap-8">
               <div>
                 <h3 class="text-2xl font-bold mb-2 group-hover:text-accent-400 transition-colors">SMK Telkom Website Rebranding</h3>
@@ -299,7 +304,7 @@
                 </div>
               </div>
               <div class="relative">
-                <img src="./assets/semicolonJHICArchitectur.png" alt="SMK Telkom Architecture" class="aspect-video w-full object-cover rounded-lg" />
+                <img src="./assets/school.png" alt="SMK Telkom New Site" class="aspect-video w-full object-cover rounded-lg" />
                 <!-- Hover overlay with link icon -->
                 <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg flex items-end justify-end p-4">
                   <div class="bg-accent-400 p-3 rounded-full">
@@ -338,7 +343,7 @@
 
           <div class="flex justify-between items-start py-6 border-b border-white/10 group hover:border-accent-400/30 transition-colors" data-aos="fade-up" data-aos-delay="250">
             <div>
-              <h3 class="text-xl font-semibold group-hover:text-accent-400 transition-colors">AWS Cloud Engineer</h3>
+              <h3 class="text-xl font-semibold group-hover:text-accent-400 transition-colors">Cloud Engineer</h3>
               <p class="text-gray-400">School Website Rebranding • SMK Telkom Sidoarjo</p>
             </div>
             <p class="text-accent-400 font-medium">Jul 2025 – Jan 2026</p>
@@ -346,24 +351,17 @@
 
           <div class="flex justify-between items-start py-6 border-b border-white/10 group hover:border-accent-400/30 transition-colors" data-aos="fade-up" data-aos-delay="300">
             <div>
-              <h3 class="text-xl font-semibold group-hover:text-accent-400 transition-colors">General Chairman MPK</h3>
-              <p class="text-gray-400">Class Representative Council • SMK Telkom Sidoarjo</p>
+              <h3 class="text-xl font-semibold group-hover:text-accent-400 transition-colors">Chairman of MPK</h3>
+              <p class="text-gray-400">Majelis Perwakilan Kelas (MPK) 2025 • SMK Telkom Sidoarjo</p>
             </div>
-            <p class="text-accent-400 font-medium">2025</p>
+            <p class="text-accent-400 font-medium">Jan 2025 - Jan 2026</p>
           </div>
 
-          <div class="flex justify-between items-start py-6 border-b border-white/10 group hover:border-accent-400/30 transition-colors" data-aos="fade-up" data-aos-delay="350">
-            <div>
-              <h3 class="text-xl font-semibold group-hover:text-accent-400 transition-colors">Google Digital Talent Scholar</h3>
-              <p class="text-gray-400">Cloud Computing Track</p>
-            </div>
-            <p class="text-accent-400 font-medium">2025</p>
-          </div>
         </div>
       </div>
     </section>
 
-    <!-- BLOG/INSIGHTS SECTION -->
+    <!-- BLOG/INSIGHTS SECTION
     <section id="blog" class="py-24 px-6 bg-[#080c14]">
       <div class="max-w-6xl mx-auto">
         <p class="text-accent-400 text-sm font-medium mb-4" data-aos="fade-up">04 — INSIGHTS</p>
@@ -404,7 +402,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- FAQ SECTION -->
     <section id="faq" class="py-24 px-6">
@@ -462,8 +460,13 @@
       <div class="max-w-2xl mx-auto text-center">
         <h2 class="text-4xl md:text-5xl font-bold mb-4" data-aos="fade-up">Get In Touch</h2>
         <p class="text-xl text-gray-400 mb-8" data-aos="fade-up" data-aos-delay="100">Have a project in mind? Let's talk about it.</p>
-        
-        <form class="space-y-4" data-aos="fade-up" data-aos-delay="200">
+                  <button type="submit" class="w-full sm:w-auto px-10 py-4 bg-accent-400 hover:bg-accent-500 text-black font-semibold rounded-xl transition-all flex items-center justify-center gap-2 mx-auto cursor-pointer">
+            <iconify-icon icon="mdi:send" width="20" height="20"></iconify-icon>
+            <a href="mailto:satyavpandega@gmail.com">
+              Send Message
+            </a>
+          </button>
+        <!-- <form class="space-y-4" data-aos="fade-up" data-aos-delay="200">
           <div class="grid sm:grid-cols-2 gap-4">
             <input type="text" placeholder="Your Name" class="w-full px-6 py-4 bg-white/5 border border-white/10 rounded-xl focus:border-accent-400 focus:outline-none transition-colors">
             <input type="email" placeholder="Your Email" class="w-full px-6 py-4 bg-white/5 border border-white/10 rounded-xl focus:border-accent-400 focus:outline-none transition-colors">
@@ -474,7 +477,7 @@
             <iconify-icon icon="mdi:send" width="20" height="20"></iconify-icon>
             Send Message
           </button>
-        </form>
+        </form> -->
       </div>
     </section>
 
@@ -484,7 +487,6 @@
         <div class="grid md:grid-cols-4 gap-12 mb-12">
           <div>
             <div class="flex items-center gap-2 mb-4">
-              <div class="w-8 h-8 bg-accent-400 rounded-lg flex items-center justify-center font-bold text-black">R</div>
               <span class="font-semibold">Revano Satya Pandega</span>
             </div>
             <p class="text-gray-400 text-sm">Cloud Engineer &amp; DevOps Engineer based in Sidoarjo, East Java, Indonesia.</p>
@@ -504,7 +506,7 @@
             <h4 class="font-semibold mb-4">Connect</h4>
             <ul class="space-y-2 text-gray-400 text-sm">
               <li><a href="https://www.linkedin.com/in/restyand1011/" target="_blank" class="hover:text-accent-400 transition-colors">LinkedIn</a></li>
-              <li><a href="https://github.com/" target="_blank" class="hover:text-accent-400 transition-colors">GitHub</a></li>
+              <li><a href="https://github.com/Satyasy" target="_blank" class="hover:text-accent-400 transition-colors">GitHub</a></li>
               <li><a href="https://www.resatya.dev" target="_blank" class="hover:text-accent-400 transition-colors">Website</a></li>
               <li><a href="mailto:satyavpandega@gmail.com" class="hover:text-accent-400 transition-colors">Email</a></li>
             </ul>
