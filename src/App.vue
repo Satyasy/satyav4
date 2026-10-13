@@ -23,10 +23,6 @@
         </div>
 
         <div class="flex items-center gap-4">
-          <a href="https://resatya.tech" target="_blank" rel="noopener" class="hidden sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-accent-400/30 bg-accent-400/10 text-accent-400 text-xs font-mono hover:bg-accent-400/20 transition-all">
-            <span class="w-1.5 h-1.5 rounded-full bg-accent-400 animate-pulse"></span>
-            resatya.tech
-          </a>
           <a href="https://www.linkedin.com/in/restyand1011/" target="_blank" rel="noopener" aria-label="LinkedIn" class="text-white/80 hover:text-accent-400 transition-colors">
             <iconify-icon icon="mdi:linkedin" width="22" height="22"></iconify-icon>
           </a>
