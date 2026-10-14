@@ -48,14 +48,14 @@
       <!-- Subtle overlay -->
       <div class="absolute inset-0 bg-gradient-to-t from-[#0a0f1a] via-transparent to-transparent"></div>
 
-      <div class="relative z-10 max-w-7xl mx-auto px-6 w-full pt-24 pb-20">
+      <div class="relative z-10 max-w-7xl mx-auto px-6 w-full pt-24 pb-32 md:pb-36">
         <div class="grid md:grid-cols-2 gap-12 items-center">
           <!-- Left Content -->
           <div>
             <!-- Badge -->
             <div class="inline-flex items-center gap-3 px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full mb-8 animate-fade-in-up">
               <img src="./assets/ProfilePhoto.jpeg" alt="Revano" class="w-7 h-7 rounded-full object-cover border border-accent-400/50">
-              <span class="text-sm text-white/90">Available for Cloud & DevOps opportunities</span>
+              <span class="text-sm text-white/90">Open for Software Engineering & Cloud opportunities</span>
             </div>
 
             <h1 class="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight mb-6 animate-fade-in-up animation-delay-200">
@@ -104,41 +104,51 @@
         </div>
       </div>
 
-      <!-- Tech Logos at Bottom -->
-      <div class="absolute bottom-6 left-0 right-0 z-10 animate-fade-in-up animation-delay-800">
-        <div class="max-w-7xl mx-auto px-6">
-          <div class="flex flex-wrap items-center justify-between gap-6 opacity-75 border-t border-white/10 pt-4">
-            <div class="flex items-center gap-2 text-white/80 hover:text-white transition-colors">
-              <iconify-icon icon="skill-icons:aws-light" width="26" height="26"></iconify-icon>
-              <span class="font-medium text-xs">AWS</span>
+      <!-- Tech Stack Running Marquee at Bottom -->
+      <div class="absolute bottom-3 left-0 right-0 z-20 animate-fade-in-up animation-delay-800">
+        <div class="max-w-7xl mx-auto px-6 mb-2 flex items-center justify-between flex-wrap gap-2">
+          <div class="inline-flex items-center gap-2 px-3 py-1 bg-accent-400/10 border border-accent-400/30 rounded-full shadow-lg shadow-accent-400/5">
+            <span class="relative flex h-2 w-2">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-accent-400"></span>
+            </span>
+            <span class="text-[11px] font-mono font-semibold tracking-wider text-accent-400 uppercase">
+              OPEN FOR SOFTWARE ENGINEERING &amp; CLOUD PROJECTS
+            </span>
+          </div>
+          <span class="text-[11px] text-gray-400 font-mono hidden md:inline-block">Pause on hover • 23+ Tools</span>
+        </div>
+
+        <div class="marquee-wrapper relative w-full overflow-hidden select-none group border-t border-white/10 pt-2.5">
+          <div class="marquee-track flex w-max group-hover:[animation-play-state:paused]">
+            <!-- Group 1 -->
+            <div class="marquee-group flex items-center gap-4 pr-4">
+              <div 
+                v-for="(tech, idx) in techStack" 
+                :key="'t1-' + idx"
+                class="flex items-center gap-2.5 px-3.5 py-1.5 bg-[#0d1221]/90 hover:bg-[#151f38] border border-white/10 hover:border-accent-400/50 rounded-xl transition-all duration-300 hover:-translate-y-0.5 cursor-default shrink-0"
+              >
+                <iconify-icon :icon="tech.icon" width="22" height="22" class="shrink-0"></iconify-icon>
+                <div class="flex flex-col text-left">
+                  <span class="text-xs font-semibold text-white tracking-tight leading-snug">{{ tech.name }}</span>
+                  <span class="text-[9px] text-gray-400 font-mono leading-none">{{ tech.category }}</span>
+                </div>
+              </div>
             </div>
-            <div class="flex items-center gap-2 text-white/80 hover:text-white transition-colors">
-              <iconify-icon icon="skill-icons:terraform-light" width="26" height="26"></iconify-icon>
-              <span class="font-medium text-xs">Terraform</span>
-            </div>
-            <div class="flex items-center gap-2 text-white/80 hover:text-white transition-colors">
-              <iconify-icon icon="skill-icons:docker" width="26" height="26"></iconify-icon>
-              <span class="font-medium text-xs">Docker</span>
-            </div>
-            <div class="flex items-center gap-2 text-white/80 hover:text-white transition-colors">
-              <iconify-icon icon="skill-icons:kubernetes" width="26" height="26"></iconify-icon>
-              <span class="font-medium text-xs">Kubernetes</span>
-            </div>
-            <div class="flex items-center gap-2 text-white/80 hover:text-white transition-colors">
-              <iconify-icon icon="skill-icons:githubactions-light" width="26" height="26"></iconify-icon>
-              <span class="font-medium text-xs">GitHub Actions</span>
-            </div>
-            <div class="flex items-center gap-2 text-white/80 hover:text-white transition-colors">
-              <iconify-icon icon="skill-icons:linux-light" width="26" height="26"></iconify-icon>
-              <span class="font-medium text-xs">Linux SysAdmin</span>
-            </div>
-            <div class="flex items-center gap-2 text-white/80 hover:text-white transition-colors">
-              <iconify-icon icon="skill-icons:prometheus" width="26" height="26"></iconify-icon>
-              <span class="font-medium text-xs">Prometheus</span>
-            </div>
-            <div class="flex items-center gap-2 text-white/80 hover:text-white transition-colors">
-              <iconify-icon icon="skill-icons:grafana-light" width="26" height="26"></iconify-icon>
-              <span class="font-medium text-xs">Grafana</span>
+
+            <!-- Group 2 (Duplicate for Infinite Seamless Loop) -->
+            <div class="marquee-group flex items-center gap-4 pr-4" aria-hidden="true">
+              <div 
+                v-for="(tech, idx) in techStack" 
+                :key="'t2-' + idx"
+                class="flex items-center gap-2.5 px-3.5 py-1.5 bg-[#0d1221]/90 hover:bg-[#151f38] border border-white/10 hover:border-accent-400/50 rounded-xl transition-all duration-300 hover:-translate-y-0.5 cursor-default shrink-0"
+              >
+                <iconify-icon :icon="tech.icon" width="22" height="22" class="shrink-0"></iconify-icon>
+                <div class="flex flex-col text-left">
+                  <span class="text-xs font-semibold text-white tracking-tight leading-snug">{{ tech.name }}</span>
+                  <span class="text-[9px] text-gray-400 font-mono leading-none">{{ tech.category }}</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -928,6 +938,33 @@ import imgLksAi from './assets/page_7_img_2.jpg'
 import imgLksJatim from './assets/page_5_img_2.png'
 import imgTraspac from './assets/page_5_img_1.png'
 import imgBeefest from './assets/beefest-sdlc.png'
+
+// Tech Stack for Running Marquee Banner
+const techStack = [
+  { name: 'AWS', icon: 'skill-icons:aws-light', category: 'Cloud Platform' },
+  { name: 'Terraform', icon: 'skill-icons:terraform-light', category: 'IaC & Automation' },
+  { name: 'Docker', icon: 'skill-icons:docker', category: 'Containerization' },
+  { name: 'Kubernetes', icon: 'skill-icons:kubernetes', category: 'Orchestration' },
+  { name: 'Linux SysAdmin', icon: 'skill-icons:linux-light', category: 'System Admin' },
+  { name: 'GitHub Actions', icon: 'skill-icons:githubactions-light', category: 'CI/CD Pipeline' },
+  { name: 'Prometheus', icon: 'skill-icons:prometheus', category: 'Monitoring' },
+  { name: 'Grafana', icon: 'skill-icons:grafana-light', category: 'Observability' },
+  { name: 'Python', icon: 'skill-icons:python-light', category: 'Backend & AI / RAG' },
+  { name: 'Laravel', icon: 'skill-icons:laravel-light', category: 'PHP Framework' },
+  { name: 'React', icon: 'skill-icons:react-light', category: 'Frontend Library' },
+  { name: 'Next.js', icon: 'skill-icons:nextjs-light', category: 'Fullstack Framework' },
+  { name: 'TypeScript', icon: 'skill-icons:typescript', category: 'Type-Safe JS' },
+  { name: 'JavaScript', icon: 'skill-icons:javascript', category: 'Web & Runtime' },
+  { name: 'PHP', icon: 'skill-icons:php-light', category: 'Server Scripting' },
+  { name: 'Node.js', icon: 'skill-icons:nodejs-light', category: 'JS Runtime' },
+  { name: 'FastAPI', icon: 'skill-icons:fastapi', category: 'High-Speed API' },
+  { name: 'Tailwind CSS', icon: 'skill-icons:tailwind-light', category: 'Utility CSS' },
+  { name: 'PostgreSQL', icon: 'skill-icons:postgres-light', category: 'Relational DB' },
+  { name: 'MySQL', icon: 'skill-icons:mysql-light', category: 'Relational DB' },
+  { name: 'Redis', icon: 'skill-icons:redis-light', category: 'In-Memory Cache' },
+  { name: 'Bash / Shell', icon: 'skill-icons:bash-light', category: 'Automation' },
+  { name: 'Git', icon: 'skill-icons:git', category: 'Version Control' },
+]
 
 // Scroll detection for navbar
 const isScrolled = ref(false)

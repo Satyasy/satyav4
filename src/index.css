@@ -88,3 +88,29 @@ body {
   animation-delay: 0.8s;
   opacity: 0;
 }
+
+/* Running Marquee Animation */
+.marquee-wrapper {
+  mask-image: linear-gradient(to right, transparent, black 4%, black 96%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 4%, black 96%, transparent);
+}
+
+.marquee-track {
+  animation: marqueeScroll 45s linear infinite;
+  will-change: transform;
+}
+
+@keyframes marqueeScroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation-play-state: paused;
+  }
+}
