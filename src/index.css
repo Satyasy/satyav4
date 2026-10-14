@@ -91,8 +91,6 @@ body {
 
 /* Running Marquee Animation - Silky Smooth Hardware Accelerated */
 .marquee-wrapper {
-  mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
   overflow: hidden;
   position: relative;
   width: 100%;
@@ -108,7 +106,7 @@ body {
   -webkit-backface-visibility: hidden;
   perspective: 1000px;
   -webkit-perspective: 1000px;
-  animation: marqueeScroll 45s linear infinite;
+  animation: marqueeScroll 60s linear infinite;
 }
 
 @keyframes marqueeScroll {

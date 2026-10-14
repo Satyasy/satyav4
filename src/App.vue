@@ -105,15 +105,15 @@
       </div>
 
       <!-- Tech Stack Running Marquee at Bottom -->
-      <div class="absolute bottom-4 left-0 right-0 z-20 animate-fade-in-up animation-delay-800">
-        <div class="marquee-wrapper relative w-full overflow-hidden select-none border-t border-white/10 pt-3">
+      <div class="absolute bottom-6 left-0 right-0 z-20">
+        <div class="marquee-wrapper relative w-full overflow-hidden select-none">
           <div class="marquee-track flex w-max">
             <!-- Group 1 -->
-            <div class="marquee-group flex items-center gap-8 pr-8">
+            <div class="marquee-group flex items-center gap-16 pr-16">
               <div 
                 v-for="(tech, idx) in techStack" 
                 :key="'t1-' + idx"
-                class="flex items-center gap-2.5 text-white/80 hover:text-white transition-colors shrink-0"
+                class="flex items-center gap-3 text-white/80 hover:text-white transition-colors shrink-0"
               >
                 <iconify-icon :icon="tech.icon" width="32" height="32" class="shrink-0"></iconify-icon>
                 <div class="flex flex-col text-left">
@@ -124,11 +124,11 @@
             </div>
 
             <!-- Group 2 (Duplicate for Infinite Seamless Loop) -->
-            <div class="marquee-group flex items-center gap-8 pr-8" aria-hidden="true">
+            <div class="marquee-group flex items-center gap-16 pr-16" aria-hidden="true">
               <div 
                 v-for="(tech, idx) in techStack" 
                 :key="'t2-' + idx"
-                class="flex items-center gap-2.5 text-white/80 hover:text-white transition-colors shrink-0"
+                class="flex items-center gap-3 text-white/80 hover:text-white transition-colors shrink-0"
               >
                 <iconify-icon :icon="tech.icon" width="32" height="32" class="shrink-0"></iconify-icon>
                 <div class="flex flex-col text-left">
