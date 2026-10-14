@@ -105,36 +105,38 @@
       </div>
 
       <!-- Tech Stack Running Marquee at Bottom -->
-      <div class="absolute bottom-6 left-0 right-0 z-20">
-        <div class="marquee-wrapper relative w-full overflow-hidden select-none">
-          <div class="marquee-track flex w-max">
-            <!-- Group 1 -->
-            <div class="marquee-group flex items-center gap-16 pr-16">
-              <div 
-                v-for="(tech, idx) in techStack" 
-                :key="'t1-' + idx"
-                class="flex items-center gap-3 text-white/80 hover:text-white transition-colors shrink-0"
-              >
-                <iconify-icon :icon="tech.icon" width="32" height="32" class="shrink-0"></iconify-icon>
-                <div class="flex flex-col text-left">
-                  <span class="text-sm font-medium text-white/90 leading-tight">{{ tech.name }}</span>
-                  <span class="text-[10px] text-gray-400 font-mono leading-tight">{{ tech.category }}</span>
-                </div>
+      <div class="absolute bottom-6 left-0 right-0 z-20 overflow-hidden">
+        <div class="flex select-none">
+          <!-- Group 1 -->
+          <div class="flex shrink-0 items-center gap-16 pr-16 animate-marquee">
+            <div 
+              v-for="(tech, idx) in techStack" 
+              :key="'t1-' + idx"
+              class="flex items-center gap-3 text-white/80 hover:text-white transition-colors shrink-0"
+            >
+              <div class="w-8 h-8 shrink-0 flex items-center justify-center">
+                <iconify-icon :icon="tech.icon" width="32" height="32"></iconify-icon>
+              </div>
+              <div class="flex flex-col text-left shrink-0">
+                <span class="text-sm font-medium text-white/90 leading-tight whitespace-nowrap">{{ tech.name }}</span>
+                <span class="text-[10px] text-gray-400 font-mono leading-tight whitespace-nowrap">{{ tech.category }}</span>
               </div>
             </div>
+          </div>
 
-            <!-- Group 2 (Duplicate for Infinite Seamless Loop) -->
-            <div class="marquee-group flex items-center gap-16 pr-16" aria-hidden="true">
-              <div 
-                v-for="(tech, idx) in techStack" 
-                :key="'t2-' + idx"
-                class="flex items-center gap-3 text-white/80 hover:text-white transition-colors shrink-0"
-              >
-                <iconify-icon :icon="tech.icon" width="32" height="32" class="shrink-0"></iconify-icon>
-                <div class="flex flex-col text-left">
-                  <span class="text-sm font-medium text-white/90 leading-tight">{{ tech.name }}</span>
-                  <span class="text-[10px] text-gray-400 font-mono leading-tight">{{ tech.category }}</span>
-                </div>
+          <!-- Group 2 (Duplicate for Infinite Seamless Loop) -->
+          <div class="flex shrink-0 items-center gap-16 pr-16 animate-marquee" aria-hidden="true">
+            <div 
+              v-for="(tech, idx) in techStack" 
+              :key="'t2-' + idx"
+              class="flex items-center gap-3 text-white/80 hover:text-white transition-colors shrink-0"
+            >
+              <div class="w-8 h-8 shrink-0 flex items-center justify-center">
+                <iconify-icon :icon="tech.icon" width="32" height="32"></iconify-icon>
+              </div>
+              <div class="flex flex-col text-left shrink-0">
+                <span class="text-sm font-medium text-white/90 leading-tight whitespace-nowrap">{{ tech.name }}</span>
+                <span class="text-[10px] text-gray-400 font-mono leading-tight whitespace-nowrap">{{ tech.category }}</span>
               </div>
             </div>
           </div>
