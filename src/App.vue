@@ -105,48 +105,35 @@
       </div>
 
       <!-- Tech Stack Running Marquee at Bottom -->
-      <div class="absolute bottom-3 left-0 right-0 z-20 animate-fade-in-up animation-delay-800">
-        <div class="max-w-7xl mx-auto px-6 mb-2 flex items-center justify-between flex-wrap gap-2">
-          <div class="inline-flex items-center gap-2 px-3 py-1 bg-accent-400/10 border border-accent-400/30 rounded-full shadow-lg shadow-accent-400/5">
-            <span class="relative flex h-2 w-2">
-              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent-400 opacity-75"></span>
-              <span class="relative inline-flex rounded-full h-2 w-2 bg-accent-400"></span>
-            </span>
-            <span class="text-[11px] font-mono font-semibold tracking-wider text-accent-400 uppercase">
-              OPEN FOR SOFTWARE ENGINEERING &amp; CLOUD PROJECTS
-            </span>
-          </div>
-          <span class="text-[11px] text-gray-400 font-mono hidden md:inline-block">Pause on hover • 23+ Tools</span>
-        </div>
-
-        <div class="marquee-wrapper relative w-full overflow-hidden select-none group border-t border-white/10 pt-2.5">
-          <div class="marquee-track flex w-max group-hover:[animation-play-state:paused]">
+      <div class="absolute bottom-4 left-0 right-0 z-20 animate-fade-in-up animation-delay-800">
+        <div class="marquee-wrapper relative w-full overflow-hidden select-none border-t border-white/10 pt-3">
+          <div class="marquee-track flex w-max">
             <!-- Group 1 -->
-            <div class="marquee-group flex items-center gap-4 pr-4">
+            <div class="marquee-group flex items-center gap-8 pr-8">
               <div 
                 v-for="(tech, idx) in techStack" 
                 :key="'t1-' + idx"
-                class="flex items-center gap-2.5 px-3.5 py-1.5 bg-[#0d1221]/90 hover:bg-[#151f38] border border-white/10 hover:border-accent-400/50 rounded-xl transition-all duration-300 hover:-translate-y-0.5 cursor-default shrink-0"
+                class="flex items-center gap-2.5 text-white/80 hover:text-white transition-colors shrink-0"
               >
-                <iconify-icon :icon="tech.icon" width="22" height="22" class="shrink-0"></iconify-icon>
+                <iconify-icon :icon="tech.icon" width="32" height="32" class="shrink-0"></iconify-icon>
                 <div class="flex flex-col text-left">
-                  <span class="text-xs font-semibold text-white tracking-tight leading-snug">{{ tech.name }}</span>
-                  <span class="text-[9px] text-gray-400 font-mono leading-none">{{ tech.category }}</span>
+                  <span class="text-sm font-medium text-white/90 leading-tight">{{ tech.name }}</span>
+                  <span class="text-[10px] text-gray-400 font-mono leading-tight">{{ tech.category }}</span>
                 </div>
               </div>
             </div>
 
             <!-- Group 2 (Duplicate for Infinite Seamless Loop) -->
-            <div class="marquee-group flex items-center gap-4 pr-4" aria-hidden="true">
+            <div class="marquee-group flex items-center gap-8 pr-8" aria-hidden="true">
               <div 
                 v-for="(tech, idx) in techStack" 
                 :key="'t2-' + idx"
-                class="flex items-center gap-2.5 px-3.5 py-1.5 bg-[#0d1221]/90 hover:bg-[#151f38] border border-white/10 hover:border-accent-400/50 rounded-xl transition-all duration-300 hover:-translate-y-0.5 cursor-default shrink-0"
+                class="flex items-center gap-2.5 text-white/80 hover:text-white transition-colors shrink-0"
               >
-                <iconify-icon :icon="tech.icon" width="22" height="22" class="shrink-0"></iconify-icon>
+                <iconify-icon :icon="tech.icon" width="32" height="32" class="shrink-0"></iconify-icon>
                 <div class="flex flex-col text-left">
-                  <span class="text-xs font-semibold text-white tracking-tight leading-snug">{{ tech.name }}</span>
-                  <span class="text-[9px] text-gray-400 font-mono leading-none">{{ tech.category }}</span>
+                  <span class="text-sm font-medium text-white/90 leading-tight">{{ tech.name }}</span>
+                  <span class="text-[10px] text-gray-400 font-mono leading-tight">{{ tech.category }}</span>
                 </div>
               </div>
             </div>
@@ -957,9 +944,9 @@ const techStack = [
   { name: 'JavaScript', icon: 'skill-icons:javascript', category: 'Web & Runtime' },
   { name: 'PHP', icon: 'skill-icons:php-light', category: 'Server Scripting' },
   { name: 'Node.js', icon: 'skill-icons:nodejs-light', category: 'JS Runtime' },
-  { name: 'FastAPI', icon: 'skill-icons:fastapi', category: 'High-Speed API' },
-  { name: 'Tailwind CSS', icon: 'skill-icons:tailwind-light', category: 'Utility CSS' },
-  { name: 'PostgreSQL', icon: 'skill-icons:postgres-light', category: 'Relational DB' },
+  { name: 'Proxmox VE', icon: 'devicon:proxmox', category: 'Virtualization' },
+  { name: 'Tailwind CSS', icon: 'skill-icons:tailwindcss-light', category: 'Utility CSS' },
+  { name: 'PostgreSQL', icon: 'skill-icons:postgresql-light', category: 'Relational DB' },
   { name: 'MySQL', icon: 'skill-icons:mysql-light', category: 'Relational DB' },
   { name: 'Redis', icon: 'skill-icons:redis-light', category: 'In-Memory Cache' },
   { name: 'Bash / Shell', icon: 'skill-icons:bash-light', category: 'Automation' },
